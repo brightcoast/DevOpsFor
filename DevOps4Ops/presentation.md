@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>DevOps for Ops Teams</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="assets/presentation.css">
-  </head>
-  <body>
-    <textarea id="source">
 
 class: center, middle
 
 
-## _DevOps For Ops Teams_
+## _DevOps For Non-Developers_ BETA
 
-<img src="images/cc_logo_final_blue_rgb.jpg" alt="Cloud Compass Computing, Inc." width="25%" >
 
-Stephen Curran, Cloud Compass Computing, Inc.<br><font size="2"><a href="https://github.com/swcurran/DevOpsFor" alt="github Repo">View it on github</a> &#9679; <a href="https://github.com/swcurran/DevOpsFor/raw/master/DevOps4Ops/devops4ops.pdf" alt="PDF Version">Download the PDF</a></font>
+Shea Phillips
 
-.center.footnote[&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This work is licensed to the public under a Creative Commons Attribution 4.0 license.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.]
+Todd Wilson
+
+.bottom-bar[This presentation is derived from content produced by Cloud Compass Computing, Inc. in accordance with the Creative Commons Attribution License V4.]
 
 ---
 
@@ -1657,13 +1649,3 @@ CALMS
    #&nbsp;
 
    #### .center[References list available for those interested in learning more]
-
-    </textarea>
-    <script src="assets/remark-latest.min.js">
-    </ <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"> />
-    </script>
-    <script>
-      var slideshow = remark.create({countIncrementalSlides: false, ratio: '16:9', highlightLines: true});
-    </script>
-  </body>
-</html>
