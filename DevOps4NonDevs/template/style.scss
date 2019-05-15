@@ -10,7 +10,7 @@ $text-dark        : #212121;
 $text-light       : $light;
 $code-background  : #F8F8F8;
 $overlay          : transparentize(#000, .5);
-$font-size        : 28px;
+$font-size        : 24px;
 $font-size-impact : 128px;
 $font             : Arial, Helvetica, sans-serif;
 $font-title       : Arial, Helvetica, sans-serif;
@@ -214,3 +214,12 @@ blockquote {
     left: 0 !important;
   }
 }
+
+// from original preso
+
+// hacks
+.fit-height {
+  max-height: 400px;
+}
+
+

@@ -1,0 +1,19 @@
+@startuml
+
+package "Front End Server\nJoey" as feserver {
+  component "Front End" as client
+}
+
+package "Application Server\nRachel" as appserver {
+  component "Application" as app
+}
+
+package "Database Server\nRoss" {
+  database "Application\nDatabase" as db
+}
+
+User --> client
+client --> app
+app --> db
+
+@enduml

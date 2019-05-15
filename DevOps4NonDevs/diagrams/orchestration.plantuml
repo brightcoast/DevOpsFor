@@ -1,0 +1,21 @@
+@startuml
+
+component "Load Balancer" as client
+component "Web 1" as client1
+component "Web 2" as client2
+component "Web 3" as client3
+component "Web 4" as client4
+client --> client1
+client --> client2
+client --> client3
+client --> client4
+
+database "Application\nDatabase\n\nRedis" as db
+
+User -down-> client
+client1 --> db
+client2 --> db
+client3 --> db
+client4 --> db
+
+@enduml

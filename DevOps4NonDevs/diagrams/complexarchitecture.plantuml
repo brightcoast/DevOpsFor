@@ -1,0 +1,34 @@
+@startuml
+
+package "Front End Pod" as feserver {
+  component "Load Balancer" as client
+  component "Front End 1" as client1
+  component "Front End 2" as client2
+  client --> client1
+  client --> client2
+}
+
+package "Application Pod" as appserver {
+  component "Load Balancer" as app
+  component "App 1" as app1
+  component "App 2" as app2
+  app --> app1
+  app --> app2
+}
+
+client1 --> app
+client2 --> app
+
+package "Database Pod" {
+  database "Application\nDatabase" as db
+  database "Replication\nDatabase" as rep1
+  database "Replication\nDatabase" as rep2
+}
+
+User -up-> client
+app1 --> db
+app2 --> db
+db --> rep1
+db --> rep2
+
+@enduml

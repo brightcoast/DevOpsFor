@@ -1,0 +1,37 @@
+@startuml
+
+actor "End User" as user
+
+package "DMZ" {
+	node "Reverse Proxy" as rp
+	node "Siteminder Agent" as sm
+}
+
+user -up-> rp
+rp <-right-> sm
+
+package "Application Zone" {
+  package "Front End Server" as feserver {
+    component "Front End" as client
+  }
+  package "Application Server" as appserver {
+    component "Application" as app
+  }
+  package "API Server" as apiserver {
+    component "API Server" as api
+  }
+}
+
+package "Database Zone" {
+  node "Database Server" as dbserver {
+    database "Application\nDatabase" as db
+  }
+}
+
+rp --> client
+client --> app
+app -right-> api
+api -left-> app
+app --> db
+
+@enduml

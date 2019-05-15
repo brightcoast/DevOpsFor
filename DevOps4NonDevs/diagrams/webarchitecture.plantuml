@@ -1,0 +1,28 @@
+@startuml
+
+actor User as user
+
+package "Browser" {
+	node "User Interface" as client
+}
+
+user -left-> client
+
+package "Application" {
+  node "Application\nServer" as app
+  node "API\nServer" as api
+}
+
+package "Database" {
+  database "Application\nDatabase" as db
+}
+
+interface "Other\nApplications" as other
+
+client --> app
+app -right-> api
+api -left-> app
+api <-right-> other
+app --> db
+
+@enduml
