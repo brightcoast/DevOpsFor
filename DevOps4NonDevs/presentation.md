@@ -2,7 +2,7 @@
 class: center, middle
 
 
-## _DevOps For Non-Developers an_ BETA
+## _DevOps For Non-Geeks_ BETA
 
 
 Shea Phillips
@@ -13,7 +13,18 @@ Todd Wilson
 
 ---
 
-# DevOps For Non-Developers
+# BETA Notice
+
+This is the first time we've devlivered this exact material, so:
+
+* provide feedback
+* be nice :)
+
+We'll incorporate feedback and make it better for the next ~~victims~~ excellent humans.
+
+---
+
+# DevOps For Non-Geeks
 
 1. .bold.red[Introduction - What's the Challenge?]
 1. Agile, Continuous Delivery and the Three Ways
@@ -24,7 +35,7 @@ Todd Wilson
 
 ---
 
-# Umm...Why would Non-Geeks we care about DevOps?
+# Umm...Why would Non-Geeks care about DevOps?
 
 - DevOps is really about better ways to deliver value across an entire system/department/organization.
 - oh, and...
@@ -38,7 +49,7 @@ Todd Wilson
 
 The course will be presented with a mixture of presentation, and most importantly, .bold.red[discussion].
 
-Please, jump in at a time with questions, comments, suggestions, snorts, etc. The goal is the material is presented in _your_ context.
+Please, jump in at any time with questions, comments, suggestions, snorts, etc. The goal is the material is presented in _your_ context.
 
 --
 
@@ -91,6 +102,9 @@ What is a unit of work?
 
 - Todd Wilson - Director, Enterprise DevOps, OCIO; Slinger of Slides and Wrangler of Whiteboards
 - Shea Phillips - Technical Lead, DevHub; Wrangler of Whiteboards and Fiddler of Bits
+
+--
+
 - Both involved in BC DevEx and CSI Lab, and DevOps platform from early days
 - Both more .em[DEV]ops than dev.em[OPS]  
 
@@ -108,25 +122,27 @@ DevOps (a clipped compound of "software DEVelopment" and "information technology
 
 ---
 
-#And now, another meme.
+#And now, an amusing meme.
 
 .col-6[
 .responsive[![Define DevOps](images/DefineDevOps.png)]]
 
 ???
-DevOps - not a straight forward "product"/"thing"
-* First use - Name of a conference presentation
+DevOps - slightly nebulous; not a straight forward "product"/"thing" (although some vendors will sell you "one")
 * Cultural component - improving communications and shared goals across the software development lifecycle
 * Lean component - continuous improvement
 * Automation and tools - robots!
 
-So lets hold off on "What is it" and go to...
+So lets hold off on "What is it" and go to...why?
 
 ---
 
 # Why is DevOps?
 ### Roots - merging Developers and Operations work
 
+#### What does each group do?
+
+--
 .col-6[
 * Devs - provide the code
    * User Interface (UI/UX)
@@ -175,7 +191,7 @@ Apps implement user stories, usability, logic, rules...
 .col-6[<img src="images/netarchitecture.png" width="90%">]
 --
 .col-6[
-## Ops View
+## In a Data Centre:
 
 * Networking zones
 * URLs - _https://myapp.gov.bc.ca_
@@ -188,7 +204,7 @@ Apps implement user stories, usability, logic, rules...
 ]
 
 ---
-# Apps run in the data centre
+# How does an app get into the data centre?
 .col-6[
 <img src="images/networkzones.gif" alt="Network Zones" width="60%" >
 <img src="images/netarchitecture.png" alt="Canonical Web Architecture - Ops View" width="50%" >
@@ -218,9 +234,16 @@ Firewall config changes per app
 ---
 #Dev and Ops: Making it Work - In Theory
 
-<img src="images/sdlc_waterfall_model.jpg" alt="Waterfall Design" width="65%" >
+.col-6[
+<img src="images/sdlc_waterfall_model.jpg" alt="Waterfall Design" width="85%" >]
 
-Requirements, artifacts, and work items determined and captured via meetings, documents, agreements and tickets.
+--
+
+.col-6[
+* Time frames measure in months
+* Requirements, artifacts, and work items determined and captured via meetings, documents, agreements and tickets.
+* Above often produced / decided before a line  
+* You got it right the first time, .em[RIGHT??!?!??] ]
 
 ???
 
@@ -248,13 +271,11 @@ In government - sometimes not obvious to the developers that this needs to be do
 
 ???
 
-Not Surprising and no one's fault
+Not Surprising and everyone is "doing their job" (see Conway's Law)
 
 * Devs - 100% of functionality, end user requirements, changes
 * Ops - 100 other apps to manage, production issues
 * It's not obvious what's needed
-* It's really hard to get budget if you can't define exactly the benefit
-
 ---
 # Deployment
 ### The rubber hits the road and...
@@ -267,13 +288,15 @@ Not Surprising and no one's fault
 
 ---
 
-# What goes wrong?
+# What could go wrong?
 ### Ineffective Communications
 
-Communication is via Word documents - the dreaded .red[_Release Guide_]
+Communication is via Word documents - the dreaded .em[_Release Guide_]
 
 * Premise: To deploy this app, do this...and this...and this...then this...
-* Assumption: The writer knows the reader's world...impossible
+* Assumption: The writer knows the reader's world...impossible (remember Ginger?)
+    * Initial state is known and consistent
+* Assumption: Steps are read, understood, and followed
 
 --
 
@@ -655,67 +678,35 @@ Production problems at a Manufacturing company - using non-traditional approache
 ]
 ???
 Cut the 1 week in the queue to 1 day, efficiency goes to:
----
-# Value Stream Mapping Example
-
-<img src="images/ValueStreamMapping.jpg" alt="Value Stream Mapping Example" width="65%" >
 
 ---
-# Value Streams - Mapping Example
+# Aside: DevOps Platform Journey
 
-<img src="images/Map-Goes-Here.png" alt="Value Stream Mapping Example" width="80%" >
+* Observations on development team productivity:
+    * Cycle time to initiate projects - weeks to months
+    * Lots of friction points and wait time for work to be done outside the team
 
-???
-If we have time/very little discussion - lead Mapping Session
-15 minutes - if before 11AM
-
----
-# Aside: My Team's Journey
-
-.left-column[
-&nbsp;
-&nbsp;
-* Development and Ops Team
-* "Demanding", "Fickle" Management
-   * "Must Have" releases - ready or not
-   * Thrashing - jumping between features
-* Poor quality software
-   * Server errors, outages
-]
-
---
-.right-column[
 * Approach:
-  * Map the delivery process
+  * Map the process
   * Figure out what hurts the most
   * Stop that pain
   * Repeat
-
-
-* Steps:
-  * Build, deploy automation
-  * Routine production releases
-  * Shrink release intervals
-  * Release only "ready" code
-  * Test automation
-
-
+  
 * Results:
-  * Value delivered much faster
-  * Product quality went way up
+    * OpenShift platform model reduced project setup time from weeks or months down to minutes
+    * KeyCloak as an SSO option reduced project wait time by at least 3 weeks
 
-]
 ---
 
 # Organizational Structure - Conway's Law
 
 .center.green[*"Any organization that designs a system will inevitably produce a design whose structure is a copy of the organization's communication structure."*]
 
-.left-column[ <img src="images/ValueStreamMapping.jpg" alt="Value Stream Mapping Example" width="90%" > ]
+.col-6[ <img src="images/ValueStreamMapping.jpg" alt="Value Stream Mapping Example" width="90%" > ]
 
 --
 
-.right-column[
+.col-6[
 ### &nbsp;
 
 * Help Desk
